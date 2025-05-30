@@ -10,4 +10,6 @@ requests==2.32.3
 beautifulsoup4==4.12.3
 pytesseract==0.3.10
 Pillow
+tqdm
 faiss-cpu
+torch==2.2.2+cpu -f https://download.pytorch.org/whl/torch_stable.html
