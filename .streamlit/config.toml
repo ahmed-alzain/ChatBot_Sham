@@ -1,0 +1,11 @@
+[theme]
+# الألوان الأساسية (سنعيد تعريف الخلفية بالـ CSS)
+primaryColor = "#9cc6e4"          # لون أساسي للزر والأيقونات (الأزرق السماوي)
+backgroundColor = "#082c58"       # هذا اللون سيعمل كاحتياطي إذا فشل الـ gradient
+secondaryBackgroundColor = "#183b65" # خلفية الشريط الجانبي والمربعات (الأزرق الأفتح قليلاً)
+
+# ألوان النصوص
+textColor = "#FFFFFF"             # لون النص الأساسي (أبيض)
+
+# خط النص (سيتجاوزه الـ CSS)
+font = "sans serif" # "Cairo" if Streamlit allows it directly, but CSS is more robust

@@ -1,0 +1,66 @@
+تشغيل عملية جمع البيانات الأولى (HTML فقط):
+
+الناتج: all_university_paragraphs.txt
+الأمر:
+Bash
+
+python scrape_sham_university.py
+(راقب شريط التقدم لزحف HTML.)
+تشغيل عملية جمع البيانات الثانية (HTML + OCR):
+
+الناتج: university_texts_with_ocr.txt
+الأمر:
+Bash
+
+python scrape_with_ocr.py
+(راقب شريط التقدم لزحف OCR، وتوقع أن يستغرق وقتاً أطول.)
+تنظيف ودمج جميع البيانات الخام من كلا المصدرين:
+
+هذا سيقرأ all_university_paragraphs.txt و university_texts_with_ocr.txt، ينظفها، يزيل التكرارات، ويضع كل شيء في ملف واحد.
+الناتج: all_cleaned_university_paragraphs.txt
+الأمر:
+Bash
+
+python clean_data.py
+(راقب شريط تقدم التنظيف النهائي.)
+تعديل faq_generator.py (هام: لمرة واحدة بعد هذا التغيير):
+
+افتح ملف faq_generator.py في محرر النصوص.
+ابحث عن السطر الذي يُعرف input_files_for_faq_generation وعدّله ليكون كالتالي:
+Python
+
+input_files_for_faq_generation = [
+    "all_cleaned_university_paragraphs.txt" # الآن يشير إلى الملف النظيف المدمج النهائي
+]
+output_faq_filename = "generated_university_faq.txt"
+احفظ التغييرات في faq_generator.py.
+توليد الأسئلة والأجوبة (FAQ) من البيانات النظيفة والمدمجة:
+
+الناتج: generated_university_faq.txt
+الأمر:
+Bash
+
+python faq_generator.py
+(هذا الأمر يتفاعل مع Google Gemini AI وقد يستغرق وقتاً طويلاً.)
+مراجعة يدوية لملف الـ FAQ المولّد وتهيئته:
+
+عملية يدوية لا يوجد لها أمر تشغيل.
+العملية: افتح الملف generated_university_faq.txt. راجع الجودة، واحذف أو عدّل ما تراه مناسباً.
+التحضير للخطوة التالية:
+Bash
+
+ren generated_university_faq.txt university_faq_qa.txt
+بناء قاعدة بيانات المتجهات (Vector Database) لـ FAQ:
+
+الناتج: مجلد faiss_university_qa_db
+الأمر:
+Bash
+
+python build_vector_db.py
+تشغيل تطبيق الشات بوت (واجهة المستخدم):
+
+الأمر:
+Bash
+
+streamlit run app.py
+هذا التسلسل الجديد يحقق فصل المسؤوليات الذي طلبته، ويضيف أشرطة التقدم، ويتجنب تكرار معالجة البيانات، ويضمن أن كل المحتوى ذي الصلة يتم تنظيفه ودمجه قبل توليد الـ FAQ.
