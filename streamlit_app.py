@@ -35,11 +35,7 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    /* إضافة الخط الجديد */
-    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
-    body, html, .st-emotion-cache-ch5fby, h1, h2, h3, h4, h5, h6, p, div, span, button, input, textarea, select, .stChatMessage {
-        font-family: "Cairo", sans-serif !important;
-    }
+
     @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
     @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'); /* أضف هذا السطر لاستيراد Font Awesome */
 
@@ -211,6 +207,12 @@ st.markdown(
     }
 
 
+        /* إضافة الخط الجديد */
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+    body, html, .st-emotion-cache-ch5fby, h1, h2, h3, h4, h5, h6, p, div, span, button, input, textarea, select, .stChatMessage {
+        font-family: "Cairo", sans-serif !important;
+    }
+
     /* تطبيق تدرج الخلفية الجديد */
     body {
         background: radial-gradient(circle at 20% 100%,
@@ -343,7 +345,7 @@ if len(st.session_state.messages) == 1 and st.session_state.messages[0]["role"] 
 # --- 1. تهيئة الشات بوت والأدوات ---
 qa_vector_db_path = "faiss_university_qa_db" 
 try:
-    model_name = "sentence-transformers/distiluse-base-multilingual-cased-v1"
+    model_name = "intfloat/multilingual-e5-small" # أو "intfloat/multilingual-e5-base"
     embeddings = HuggingFaceEmbeddings(model_name=model_name)
     
     if "GOOGLE_API_KEY" not in os.environ:

@@ -46,7 +46,7 @@ print(f"تم تقسيم النصوص إلى {len(chunks)} جزءًا (chunk).")
 
 # 3. إنشاء تضمينات (Embeddings) باستخدام Hugging Face Model
 print("جاري إنشاء تضمينات (embeddings) للنصوص باستخدام نموذج Hugging Face.")
-model_name = "sentence-transformers/distiluse-base-multilingual-cased-v1"
+model_name = "intfloat/multilingual-e5-small" # أو "intfloat/multilingual-e5-base"
 embeddings = HuggingFaceEmbeddings(model_name=model_name)
 
 # 4. بناء قاعدة بيانات المتجهات (Vector Database) باستخدام FAISS
