@@ -1,3 +1,5 @@
+setuptools>=65.5.1
+wheel>=0.38.4
 streamlit==1.35.0
 langchain-community==0.3.0
 langchain-google-genai==2.1.5
@@ -7,5 +9,5 @@ python-dotenv==1.0.1
 requests==2.32.3
 beautifulsoup4==4.12.3
 pytesseract==0.3.10
-Pillow==9.5.0
+Pillow==9.5.0  # أو أي إصدار تقوم باختباره
 faiss-cpu
