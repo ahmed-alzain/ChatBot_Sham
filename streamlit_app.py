@@ -345,10 +345,11 @@ if len(st.session_state.messages) == 1 and st.session_state.messages[0]["role"] 
 # --- 1. تهيئة الشات بوت والأدوات ---
 qa_vector_db_path = "faiss_university_qa_db" 
 try:
-    model_name = "sentence-transformers/distiluse-base-multilingual-cased-v1"
+    # model_name = "sentence-transformers/distiluse-base-multilingual-cased-v1"
+    model_name = "asafaya/bert-base-arabic" # نموذج عربي من Hugging Face
     embeddings = HuggingFaceEmbeddings(model_name=model_name)
     
-    if "GOOGLE_API_KEY" not in st.secrets:
+    if "GOOGLE_API_KEY" not in os.environ:
         st.error("❌ خطأ: متغير البيئة 'GOOGLE_API_KEY' غير موجود في ملف .env أو البيئة. يرجى تعيينه لتشغيل الذكاء الاصطناعي التوليدي.")
         st.stop()
     llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0) # استخدام نموذج Google Gemini
@@ -358,7 +359,7 @@ try:
     st.success("✔ تم تحميل قاعدة بيانات الأسئلة والأجوبة (FAQ) بنجاح.")
 
     # --- تهيئة أداة البحث على الويب (Google Serper) ---
-    if "SERPER_API_KEY" not in st.secrets:
+    if "SERPER_API_KEY" not in os.environ:
         st.warning("⚠️ تحذير: متغير البيئة 'SERPER_API_KEY' غير موجود. لن يتم تفعيل أداة البحث على الويب.")
         serper_search = None
     else:
