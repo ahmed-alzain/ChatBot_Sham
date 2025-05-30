@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+*.venv
+
+# dotenv environment variables file
+.env
+
+# Streamlit
+.streamlit/config.toml # إذا كنت تستخدمه محليًا للتخصيص
+
+# OS generated files
+.DS_Store
+Thumbs.db

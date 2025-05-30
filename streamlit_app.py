@@ -35,6 +35,11 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+    /* إضافة الخط الجديد */
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+    body, html, .st-emotion-cache-ch5fby, h1, h2, h3, h4, h5, h6, p, div, span, button, input, textarea, select, .stChatMessage {
+        font-family: "Cairo", sans-serif !important;
+    }
     @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
     @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'); /* أضف هذا السطر لاستيراد Font Awesome */
 
@@ -205,11 +210,6 @@ st.markdown(
         color: #9cc6e4 !important; 
     }
 
-    /* إضافة الخط الجديد */
-    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
-    body, html, .st-emotion-cache-ch5fby, h1, h2, h3, h4, h5, h6, p, div, span, button, input, textarea, select, .stChatMessage {
-        font-family: "Cairo", sans-serif !important;
-    }
 
     /* تطبيق تدرج الخلفية الجديد */
     body {
