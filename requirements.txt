@@ -12,5 +12,6 @@ pytesseract==0.3.10
 Pillow
 tqdm
 faiss-cpu
+numpy==1.26.4
 torch==2.5.0+cpu
 --extra-index-url https://download.pytorch.org/whl/cpu
