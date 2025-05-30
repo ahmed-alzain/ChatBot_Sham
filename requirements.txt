@@ -9,5 +9,5 @@ python-dotenv==1.0.1
 requests==2.32.3
 beautifulsoup4==4.12.3
 pytesseract==0.3.10
-Pillow==9.5.0  # أو أي إصدار تقوم باختباره
+Pillow==7.0.0
 faiss-cpu
