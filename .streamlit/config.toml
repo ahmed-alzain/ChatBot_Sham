@@ -12,4 +12,4 @@ font = "sans serif" # "Cairo" if Streamlit allows it directly, but CSS is more r
 
 
 [compatibility]
-python_version = "3.13.3"
+python_version = "3.12"
