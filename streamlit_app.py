@@ -268,7 +268,7 @@ if "messages" not in st.session_state:
 # --- الشريط الجانبي (Sidebar) ---
 with st.sidebar:
     with st.container(): 
-        st.image("C:/Users/ALWAFER/Desktop/ChatBot_Sham/images/logo.png", use_container_width=True) 
+        st.image("images/logo.png", use_container_width=True) 
         st.markdown("<h3 style='color: #9cc6e4;'>حول البوت ✨</h3>", unsafe_allow_html=True)
         st.markdown(
             """
