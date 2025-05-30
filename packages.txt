@@ -1,4 +1,3 @@
 swig
-libopenblas-dev  # عادة ما تكون مطلوبة لـ Faiss
-liblapack-dev    # عادة ما تكون مطلوبة لـ Faiss
-libfaiss-dev     # هذه هي مكتبة Faiss C++
+libopenblas-dev
+liblapack-dev
