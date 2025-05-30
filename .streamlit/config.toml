@@ -9,3 +9,7 @@ textColor = "#FFFFFF"             # لون النص الأساسي (أبيض)
 
 # خط النص (سيتجاوزه الـ CSS)
 font = "sans serif" # "Cairo" if Streamlit allows it directly, but CSS is more robust
+
+
+[compatibility]
+python_version = "3.12"

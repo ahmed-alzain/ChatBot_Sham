@@ -1,7 +1,7 @@
 streamlit==1.35.0
 langchain-community==0.2.2
 langchain-google-genai==2.1.5
-langchain-core==0.2.8
+langchain-core==0.3.62
 sentence-transformers==2.7.0
 python-dotenv==1.0.1
 requests==2.32.3
