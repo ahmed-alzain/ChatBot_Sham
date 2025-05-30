@@ -345,7 +345,7 @@ if len(st.session_state.messages) == 1 and st.session_state.messages[0]["role"] 
 # --- 1. تهيئة الشات بوت والأدوات ---
 qa_vector_db_path = "faiss_university_qa_db" 
 try:
-    model_name = "intfloat/multilingual-e5-small" # أو "intfloat/multilingual-e5-base"
+    model_name = "sentence-transformers/distiluse-base-multilingual-cased-v1"
     embeddings = HuggingFaceEmbeddings(model_name=model_name)
     
     if "GOOGLE_API_KEY" not in st.secrets:
