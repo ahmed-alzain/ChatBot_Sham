@@ -92,7 +92,7 @@ def scrape_single_page_with_ocr(url):
                 # فلترة الصور الصغيرة جدًا أو الأيقونات لتجنب OCR غير الضروري
                 # يمكنك تعديل هذه الشروط بناءً على تحليل موقعك
                 if img_tag.get('width') and int(img_tag['width']) < 50 and img_tag.get('height') and int(img_tag['height']) < 50:
-                     continue # تخطي الصور الصغيرة جداً
+                    continue # تخطي الصور الصغيرة جداً
                 
                 extracted_img_text = extract_text_from_image(full_img_url)
                 if extracted_img_text:
@@ -178,4 +178,4 @@ initial_urls_for_ocr_crawl = [
 # --- كيفية الاستخدام (تشغيل السكربت) ---
 if __name__ == "__main__":
     output_ocr_file = "university_texts_with_ocr.txt"
-    crawl_ocr_website(initial_urls_for_ocr_crawl, max_depth=1, output_file=output_ocr_file)
+    crawl_ocr_website(initial_urls_for_ocr_crawl, max_depth=3, output_file=output_ocr_file)

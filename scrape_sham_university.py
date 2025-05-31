@@ -117,7 +117,7 @@ initial_urls_for_html_crawl = [
     "https://shamuniversity.com/nav67"
 ]
 
-# --- كيفية الاستخدام (تشغيل السكربت) ---
+# (تشغيل السكربت) ---
 if __name__ == "__main__":
     output_html_file = "all_university_paragraphs.txt"
-    crawl_html_website(initial_urls_for_html_crawl, max_depth=1, output_file=output_html_file)
+    crawl_html_website(initial_urls_for_html_crawl, max_depth=3, output_file=output_html_file)

@@ -1,4 +1,5 @@
 import os
+from turtle import st
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
@@ -20,7 +21,7 @@ class FAQGenerator:
         self.llm = self._initialize_llm()
 
     def _initialize_llm(self):
-        if "GOOGLE_API_KEY" not in os.environ:
+        if "GOOGLE_API_KEY" not in st.secrets:
             raise ValueError("خطأ: متغير البيئة 'GOOGLE_API_KEY' غير موجود. يرجى تعيينه.")
         print("✔ تم تهيئة نموذج Google Gemini LLM (للذكاء الاصطناعي التوليدي).")
         return ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0.3) 

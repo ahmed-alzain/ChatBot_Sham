@@ -7,7 +7,8 @@ from langchain_core.output_parsers import StrOutputParser
 # 1. تحميل قاعدة بيانات المتجهات المحفوظة (الجديدة للـ FAQ)
 vector_db_path = "faiss_university_qa_db" # المسار الجديد لقاعدة بيانات الـ QA
 try:
-    model_name = "sentence-transformers/distiluse-base-multilingual-cased-v1"
+    # model_name = "sentence-transformers/distiluse-base-multilingual-cased-v1"
+    model_name = "asafaya/bert-base-arabic"
     embeddings = HuggingFaceEmbeddings(model_name=model_name)
 
     vector_db = FAISS.load_local(vector_db_path, embeddings, allow_dangerous_deserialization=True)

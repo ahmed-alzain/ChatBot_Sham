@@ -285,8 +285,14 @@ with st.sidebar:
             """
         )
         st.markdown("<div style='color: #b9955c; font-size: 0.9em;'>تذكر: المعلومات دقيقة بناءً على المصدر.</div>", unsafe_allow_html=True)
-    
-    st.markdown("---") 
+        st.markdown("---") 
+    st.markdown("<h3 style='color: #9cc6e4;'>تم بناء هذا الشات من قبل الطالبين</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='color: #ffb563;text-shadow: 0 0 5px red;'>Hamid Al-murai & Ahmed Al-Zain</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='color: #9cc6e4;text-shadow: 0 0 3px #a2d2ff;'>بإشراف الدكتورة هنادي العبد الله</h3>", unsafe_allow_html=True)
+    st.markdown("---")
+
+
+
     st.subheader("خيارات المحادثة")
     
     if st.button("💬 بدء محادثة جديدة", help="ابدأ محادثة جديدة بمسح السجل الحالي.", key="new_chat_button"):
