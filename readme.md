@@ -1,4 +1,3 @@
-تمام\! لقد جمعت الآن كل الأجزاء الأساسية لمشروعك. بناءً على هيكل الملفات، وأكواد `app.py` و `chatbot.py` و `build_vector_db.py` و `clean_data.py` و `scrape_sham_university.py` و `scrape_with_ocr.py`، بالإضافة إلى ملف `config.toml` ومتغيرات `.env`، سأقوم بإنشاء ملف `README.md` احترافي يشرح المشروع من البداية إلى النهاية.
 
 -----
 
@@ -253,7 +252,7 @@ streamlit run app.py
 
 ## 📄 الترخيص
 
-هذا المشروع مرخص بموجب ترخيص [أدخل نوع الترخيص هنا، مثال: MIT License].
+هذا المشروع مرخص بموجب ترخيص [MIT License].
 
 -----
 
