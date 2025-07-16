@@ -151,9 +151,13 @@ CHATBOT_SHAM/
 
       * أنشئ ملفاً جديداً باسم `.env` في المجلد الرئيسي للمشروع (`CHATBOT_SHAM/`).
       * أضف الأسطر التالية (مع استبدال القيم الفعلية لمفاتيحك):
-      اعداد المفاتيح في كل من 
-      .env 
+      *  اعداد المفاتيح في كل من :
+     
+      .env
+    
       secrets.toml
+
+    
         ```
         GOOGLE_API_KEY="YOUR_GOOGLE_API_KEY_HERE"
         SERPER_API_KEY="YOUR_SERPER_API_KEY_HERE"
