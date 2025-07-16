@@ -153,8 +153,11 @@ CHATBOT_SHAM/
       * أضف الأسطر التالية (مع استبدال القيم الفعلية لمفاتيحك):
       *  اعداد المفاتيح في كل من :
      
-      .env 
+      .env
+    
       secrets.toml
+
+    
         ```
         GOOGLE_API_KEY="YOUR_GOOGLE_API_KEY_HERE"
         SERPER_API_KEY="YOUR_SERPER_API_KEY_HERE"
