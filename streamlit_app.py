@@ -19,6 +19,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
+google_api_key = st.secrets["GOOGLE_API_KEY"]
+serper_api_key = st.secrets["SERPER_API_KEY"]
+
+
 # --- تعريف عتبة المسافة لأسئلة الـ FAQ ---
 FAQ_DISTANCE_THRESHOLD = 0.2 
 
